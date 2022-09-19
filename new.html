@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex,布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .yingyin {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+      }
+      .flex {
+        display: flex;
+      }
+      .white {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 1" class="white yingyin"></div>
+    <!-- 主区域 -->
+    <div class="flex1 column flex" style="flex-direction: column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="white yingyin"></div>
+      <!-- 内容区 -->
+      <div class="flex1 flex" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="white yingyin flex1 mgt8"></div>
+            <div style="height: 100px" class="white yingyin flex1 mgt8"></div>
+            <div style="height: 100px" class="white yingyin flex1 mgt8"></div>
+            <div style="height: 100px" class="white yingyin flex1 mgt8"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="felx column">
+            <!-- 列表项 -->
+            <div style="height: 300px" class="white yingyin"></div>
+            <div style="height: 300px" class="white yingyin"></div>
+            <div style="height: 300px" class="white yingyin"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!-- 分块 -->
+          <div style="height: 300px" class="white yingyin"></div>
+          <div style="height: 300px" class="white yingyin mgt8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
