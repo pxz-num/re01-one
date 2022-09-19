@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      * {
+        /* border: 1px solid black; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .flex {
+        display: flex;
+      }
+      .white {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg {
+        margin: 0;
+      }
+      .mgr {
+        margin-right: 0;
+      }
+      .mgt {
+        margin-top: 0;
+      }
+      .flex_center {
+        justify-self: center;
+      }
+      .daohang {
+        padding: 15px 20px;
+        border: bottom 1px solid red;
+        font-size: 18px;
+        color: #666;
+      }
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuju {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 250px" class="white margin">
+      <!-- 头像栏 -->
+      <div
+        style="padding: 10px; align-items: center; justify-content: center"
+        class="flex"
+      >
+        <img
+          src="https://pic1.zhimg.com/80/v2-23d671bf74a246c54b1256bd2322d461_720w.jpg?source=1940ef5c"
+          alt="鼍"
+          width="150px"
+          height="80px"
+        />
+      </div>
+      <!-- 导航栏 -->
+      <div
+        class="daohang flex"
+        style="align-items: center; justify-content: center"
+      >
+        不知道写啥
+      </div>
+      <div
+        class="daohang flex"
+        style="align-items: center; justify-content: center"
+      >
+        导航
+      </div>
+      <div
+        class="daohang flex"
+        style="align-items: center; justify-content: center"
+      >
+        导航
+      </div>
+      <div
+        class="daohang flex"
+        style="align-items: center; justify-content: center"
+      >
+        导航
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+      <!-- 头部 -->
+      <div style="height: 80px" class="white mgt"></div>
+      <!-- 内容区 -->
+      <div class="flex flex1">
+        <!-- 左区 -->
+        <div class="flex column mg" style="flex: 3">
+          <!-- 数据区 -->
+          <div style="height: 100px" class="flex">
+            <!-- 4个区 -->
+            <div class="flex flex1 white mg"></div>
+            <div class="flex flex1 white mg"></div>
+            <div class="flex flex1 white mg"></div>
+            <div class="flex flex1 white mg"></div>
+          </div>
+          <!-- 内容区1，2 -->
+          <div style="height: 200px" class="white mg"></div>
+          <div style="height: 200px" class="white mg"></div>
+          <div style="height: 200px" class="white mg"></div>
+          <div style="height: 200px" class="white mg"></div>
+        </div>
+        <!-- 右区 -->
+        <div class="flex column" style="flex: 1">
+          <div style="height: 300px" class="felx1 white felx mgr"></div>
+          <div style="height: 300px" class="felx1 white felx mgr"></div>
+          <div style="height: 300px" class="felx1 white felx mgr"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
